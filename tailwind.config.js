@@ -15,14 +15,12 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-    colors: {
-      sage1: "#86A789",
-      sage2: "#B2C8BA",
-      sage3: "#D2E3C8",
-      sage4: "#EBF3E8",
-    },
     extend: {
       colors: {
+        sage1: "#86A789",
+        sage2: "#B2C8BA",
+        sage3: "#D2E3C8",
+        sage4: "#EBF3E8",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
