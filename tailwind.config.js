@@ -16,11 +16,15 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        chelsea: "Chelsea Market",
+      },
       colors: {
         sage1: "#86A789",
         sage2: "#B2C8BA",
         sage3: "#D2E3C8",
         sage4: "#EBF3E8",
+        pinky: "#FF5DB5",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
