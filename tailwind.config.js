@@ -25,6 +25,7 @@ module.exports = {
         sage3: "#D2E3C8",
         sage4: "#EBF3E8",
         pinky: "#FF5DB5",
+        tealLagoon: "#0E9C9C",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
