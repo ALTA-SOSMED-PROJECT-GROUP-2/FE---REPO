@@ -54,7 +54,7 @@ const Login = () => {
               />
             )}
           </CustomFormField>
-          <p className="mt-2 sm:mt-3 text-sage1 text-sm">Forgot Password?</p>
+          <p className="mt-2 sm:mt-3 text-tealLagoon text-sm">Forgot Password?</p>
           <Button
             type="submit"
             className="mx-4 sm:mx-8 mt-6 sm:mt-8 bg-sage1 hover:bg-sage2"
