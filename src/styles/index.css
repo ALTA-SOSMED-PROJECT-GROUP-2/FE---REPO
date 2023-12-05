@@ -74,3 +74,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'Chelsea Market';
+  src: url('../assets/ChelseaMarket-Regular.ttf') format('truetype');
+}
