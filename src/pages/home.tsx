@@ -1,5 +1,5 @@
-import CreatePosting from "@/components/create-posting";
-import ListPosting from "@/components/list-posting";
+import CreatePosting from "@/components/Posting/create-posting";
+import ListPosting from "@/components/Posting/list-posting";
 import LayoutPage from "@/layouts/layout-page";
 
 export default function Home() {

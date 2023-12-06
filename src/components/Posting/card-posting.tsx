@@ -14,7 +14,7 @@ export default function CardPosting(props: Props) {
           <img src="/src/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg" alt="" />
         </div>
         <div className="flex flex-col gap-4 w-full">
-          <div className="">
+          <div>
             <div className="flex items-center gap-2">
               <p className="font-chela text-pinky text-xl">{data.fullname}</p>
               <p className="text-sage1">{data.username} . </p>
