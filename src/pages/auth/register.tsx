@@ -29,20 +29,20 @@ const Register = () => {
           className="flex flex-col w-full md:w-1/3 bg-white rounded-md p-8"
         >
           <img
-            //   className=' -mt-28'
+            className=' h-36 -my-5'
             src={logo}
             alt="Chirpy Logo"
           />
-          <p className="mt-2 sm:mt-3 text-center text-pinky font-chelsea">
+          <p className="mt-2 sm:mt-3 text-center text-pinky font-chelsea text-sm">
             Buat akun untuk pengalaman terbaru.
           </p>
-          <CustomFormField control={form.control} name="email" label="Email">
+          <CustomFormField control={form.control} name="email" >
             {(field) => (
               <Input
                 {...field}
                 placeholder="Phone Number, Full Name or Email"
                 type="email"
-                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-8"
+                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-4"
                 disabled={form.formState.isSubmitting}
                 aria-disabled={form.formState.isSubmitting}
               />
@@ -51,14 +51,13 @@ const Register = () => {
           <CustomFormField
             control={form.control}
             name="phone_number"
-            label="Phone Number"
           >
             {(field) => (
               <Input
                 {...field}
                 placeholder="Phone Number"
                 type="tel"
-                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-8"
+                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-4"
                 disabled={form.formState.isSubmitting}
                 aria-disabled={form.formState.isSubmitting}
               />
@@ -67,14 +66,13 @@ const Register = () => {
           <CustomFormField
             control={form.control}
             name="full_name"
-            label="Full Name"
           >
             {(field) => (
               <Input
                 {...field}
                 placeholder="Full Name"
                 type="text"
-                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-8"
+                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-4"
                 disabled={form.formState.isSubmitting}
                 aria-disabled={form.formState.isSubmitting}
               />
@@ -83,14 +81,13 @@ const Register = () => {
           <CustomFormField
             control={form.control}
             name="username"
-            label="Username"
           >
             {(field) => (
               <Input
                 {...field}
                 placeholder="Username"
                 type="text"
-                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-8"
+                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-4"
                 disabled={form.formState.isSubmitting}
                 aria-disabled={form.formState.isSubmitting}
               />
@@ -99,14 +96,13 @@ const Register = () => {
           <CustomFormField
             control={form.control}
             name="password"
-            label="Password"
           >
             {(field) => (
               <Input
                 {...field}
                 placeholder="Password"
                 type="password"
-                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-8"
+                className="p-3 bg-sage3 rounded-md mt-4 sm:mt-4"
                 disabled={form.formState.isSubmitting}
                 aria-disabled={form.formState.isSubmitting}
               />
