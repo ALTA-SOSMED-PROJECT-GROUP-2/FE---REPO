@@ -1,3 +1,4 @@
+import BottomNavbar from "@/components/bottom-navbar";
 import { ReactNode } from "react";
 import Sidebar from "@/components/sidebar";
 
@@ -13,6 +14,7 @@ export default function LayoutPage(props: Readonly<Props>) {
       <div className="w-full py-4 px-8 mx-auto flex flex-col grow container overflow-auto">
         {children}
       </div>
+      <BottomNavbar />
     </div>
   );
 }
