@@ -7,7 +7,7 @@ interface Props {
 export default function CardComments(props: Props) {
   const { data } = props;
   return (
-    <div className="flex mb-10 gap-4 border-b border-b-sage1 py-6 w-full px-10">
+    <div className="flex mb-10 gap-4 border-b border-b-sage1 py-6 w-full px-20">
       <div>
         <img src="/src/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg" alt="" />
       </div>

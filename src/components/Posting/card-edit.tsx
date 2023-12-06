@@ -3,7 +3,7 @@ import EditPosting from "./edit-posting";
 
 export default function CardEdit() {
   return (
-    <div className="border-b border-b-sage1 py-10">
+    <div className="border-b border-b-sage1 py-10 px-10">
       <div className="flex pb-4 px-10 gap-4">
         <div>
           <img src="/src/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg" alt="" />

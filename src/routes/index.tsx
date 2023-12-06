@@ -13,6 +13,7 @@ export default function Router() {
       children: [
         { path: "/", element: <Home /> },
         { path: "/comments/:id", element: <Comments /> },
+        {path: "/profile", element: <Profile/>},
         {
           path: "/login",
           element: <Login />,
