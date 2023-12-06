@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import CardPosting from "./card-posting";
 import { Posting } from "@/utils/apis/posting";
 import { getPosting } from "@/utils/apis/posting/api";
+import CardEdit from "./card-edit";
 
 export default function ListPosting() {
   const [postings, setPostings] = useState<Posting[]>([]);
@@ -20,6 +21,7 @@ export default function ListPosting() {
   };
   return (
     <div>
+      <CardEdit/>
       {postings.map((posting) => (
         <CardPosting data={posting} key={posting.id}/>
       ))}

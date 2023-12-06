@@ -11,7 +11,7 @@ export default function CardComments(props: Props) {
       <div>
         <img src="/src/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg" alt="" />
       </div>
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-fit">
         <div className="">
           <div className="flex items-center gap-1">
             <p className="font-chela text-pinky text-xl">{data.fullname}</p>

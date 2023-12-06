@@ -1,4 +1,4 @@
-import { Input } from "./ui/ui/input";
+import { Input } from "../ui/ui/input";
 
 export default function CreateComment() {
   return (
