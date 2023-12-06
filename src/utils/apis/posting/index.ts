@@ -1,6 +1,6 @@
 import { sampleDataPosting } from "./sample-data";
-import { Posting, Response, Payload } from "./types";
 import { getPosting } from "./api";
+import { Image, Posting, Response } from "./types";
 
 export { sampleDataPosting, getPosting };
-export type { Posting, Response, Payload };
+export type { Image, Posting, Response };
