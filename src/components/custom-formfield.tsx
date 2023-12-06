@@ -18,7 +18,7 @@ import { ReactNode } from "react";
 
 interface Props<T extends FieldValues> {
   name: FieldPath<T>;
-  label: string;
+  label?: string;
   placeholder?: string;
   options?: any[];
   description?: string;
@@ -39,7 +39,7 @@ const CustomFormField = <T extends FieldValues>(
       name={name}
       render={({ field }) => (
         <FormItem>
-          <FormLabel className="text-white">{label}</FormLabel>
+          {label &&<FormLabel className="text-white">{label}</FormLabel>}
           <FormControl>{children(field)}</FormControl>
           {description && <FormDescription>{description}</FormDescription>}
           <FormMessage className=" text-sage1"/>

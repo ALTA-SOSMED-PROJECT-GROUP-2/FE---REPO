@@ -1,5 +1,7 @@
-import Sidebar from "@/components/sidebar";
+
+import BottomNavbar from "@/components/bottom-navbar";
 import { ReactNode } from "react";
+import Sidebar from "@/components/sidebar";
 
 interface Props {
   children: ReactNode;
@@ -8,11 +10,13 @@ interface Props {
 export default function LayoutPage(props: Readonly<Props>) {
   const { children } = props;
   return (
-    <div className="w-full h-screen flex overflow-auto font-chelsea">
+
+    <div className="w-full h-screen flex flex-row">
       <Sidebar />
-      <div className="w-full flex flex-col items-center overflow-auto">
+      <div className="w-full py-4 px-8 mx-auto flex flex-col grow container overflow-auto">
         {children}
       </div>
+      <BottomNavbar />
     </div>
   );
 }
