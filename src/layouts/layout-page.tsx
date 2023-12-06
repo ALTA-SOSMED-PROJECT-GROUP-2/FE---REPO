@@ -1,5 +1,4 @@
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
+import Sidebar from "@/components/sidebar";
 import { ReactNode } from "react";
 
 interface Props {
@@ -9,12 +8,11 @@ interface Props {
 export default function LayoutPage(props: Readonly<Props>) {
   const { children } = props;
   return (
-    <div className="w-full h-screen flex flex-col overflow-auto">
-      <Navbar />
-      <div className="w-full py-4 px-8 mx-auto flex flex-col grow container">
+    <div className="w-full h-screen flex overflow-auto font-chelsea">
+      <Sidebar />
+      <div className="w-full flex flex-col items-center overflow-auto">
         {children}
       </div>
-      <Footer />
     </div>
   );
 }

@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       fontFamily: {
         chelsea: "Chelsea Market",
+        chela: "Chela One"
       },
       colors: {
         sage1: "#86A789",
@@ -26,6 +27,7 @@ module.exports = {
         sage4: "#EBF3E8",
         pinky: "#FF5DB5",
         tealLagoon: "#0E9C9C",
+        textColor: "#0E9C9C",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
