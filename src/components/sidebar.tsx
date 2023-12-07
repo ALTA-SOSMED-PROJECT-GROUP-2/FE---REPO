@@ -47,7 +47,7 @@ const Sidebar = () => {
           </Link>
         </div>
         <Link
-          to="/profile"
+          to="/login"
           className="w-fit mb-20 px-4 py-2 flex flex-row items-center gap-5"
         >
           <svg

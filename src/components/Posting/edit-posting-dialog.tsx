@@ -53,7 +53,7 @@ export default function EditPostingDialog() {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <div className="flex items-center justify-between">
-          <AlertDialogCancel className="bg-sage1 hover:bg-sage2 hover:text-white text-white">
+          <AlertDialogCancel className="bg-red-400 hover:bg-sage2 hover:text-white text-white">
             Cancel
           </AlertDialogCancel>
           <div className="flex items-center">

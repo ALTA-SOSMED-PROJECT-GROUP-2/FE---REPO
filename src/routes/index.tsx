@@ -6,6 +6,7 @@ import ProtectedRoutes from "./protected-routes";
 import Register from "@/pages/auth/register";
 import Home from "@/pages/home";
 import Comments from "@/pages/comments/comments";
+import EditProfile from "@/pages/profile/edit-profile";
 export default function Router() {
   const router = createBrowserRouter([
     {
@@ -13,7 +14,8 @@ export default function Router() {
       children: [
         { path: "/", element: <Home /> },
         { path: "/comments/:id", element: <Comments /> },
-        {path: "/profile", element: <Profile/>},
+        { path: "/profile", element: <Profile /> },
+        { path: "/profile/edit", element: <EditProfile /> },
         {
           path: "/login",
           element: <Login />,
