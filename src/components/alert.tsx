@@ -34,7 +34,7 @@ const Alert = (props: Props) => {
         <AlertDialogFooter>
           <AlertDialogCancel
             onClick={onCancel}
-            className="bg-sage1 hover:bg-sage2 hover:text-white text-white text-lg"
+            className="bg-red-400 hover:bg-sage2 hover:text-white text-white text-lg"
           >
             Cancel
           </AlertDialogCancel>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/ui/button";
 import LayoutPage from "@/layouts/layout-page";
 import PostCard from "@/components/post-card";
 import { Separator } from "@/components/ui/ui/separator";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   return (
@@ -23,9 +24,11 @@ const Profile = () => {
           <div className="flex flex-col gap-3">
             <div className="flex flex-row items-center gap-12">
               <p className="font-chelsea">ur_lover</p>
-              <Button size="sm" className="bg-sage1 hover:bg-sage2">
-                Edit Profile
-              </Button>
+              <Link to="/profile/edit">
+                <Button size="sm" className="bg-sage1 hover:bg-sage2">
+                  Edit Profile
+                </Button>
+              </Link>
             </div>
             <div className="flex flex-row items-center gap-12">
               <div className="flex flex-col items-center">
