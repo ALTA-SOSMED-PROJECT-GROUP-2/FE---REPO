@@ -1,5 +1,3 @@
-import Alert from "../alert";
-import EditPostingDialog from "./edit-posting-dialog";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,11 +5,26 @@ import {
   DropdownMenuTrigger,
 } from "../ui/ui/dropdown-menu";
 
+import Alert from "../alert";
+import EditPostingDialog from "./edit-posting-dialog";
+
 export default function EditPosting() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <img src="/src/assets/down-arrow 1 (1).svg" alt="" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="4"
+          viewBox="0 0 24 4"
+          fill="none"
+          className="mt-2"
+        >
+          <path
+            d="M0 0L0 4H6V0L0 0ZM9 0V4H15V0L9 0ZM18 0V4H24V0L18 0Z"
+            fill="#4A4A4A"
+          />
+        </svg>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="font-chelsea text-textColor2">
         <Alert
