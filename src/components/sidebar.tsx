@@ -3,7 +3,7 @@ import logo from "@/assets/Chirpy.svg";
 
 const Sidebar = () => {
   return (
-    <div className="min-h-screen flex flex-col border border-r-sage1 w-[30rem]">
+    <div className="min-h-screen hidden md:flex flex-col border border-r-sage1 w-[30rem]">
       <img className=" h-36" src={logo} alt="Chirpy Logo" />
       <nav className="h-full mx-10 flex flex-col gap-3 justify-between">
         <div className="mt-20">
