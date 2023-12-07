@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BottomNavbar = () => {
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-white border-t border-r-sage1 flex justify-around items-center p-4 md:hidden">
+    <nav className="w-full bg-white border-t border-r-sage1 flex justify-around items-center p-4 md:hidden">
       <Link to="/" className="w-fit px-3 py-1 flex flex-row items-center gap-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
