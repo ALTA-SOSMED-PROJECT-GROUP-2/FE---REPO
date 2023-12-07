@@ -1,7 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
 import logo from "@/assets/Chirpy.svg";
 
 const Sidebar = () => {
+  const location = useLocation()
+  const pathname = location.pathname;
+  
   return (
     <div className="min-h-screen hidden md:flex flex-col border border-r-sage1 w-[30rem]">
       <img className=" h-36" src={logo} alt="Chirpy Logo" />
@@ -9,7 +13,7 @@ const Sidebar = () => {
         <div className="mt-20">
           <Link
             to="/"
-            className="w-fit px-3 py-1 flex flex-row items-center gap-5"
+            className={`w-fit px-4 py-2 flex flex-row items-center gap-5 ${pathname === "/" && "bg-pinky bg-opacity-50 rounded-full"}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +32,7 @@ const Sidebar = () => {
           </Link>
           <Link
             to="/profile"
-            className="w-fit px-4 py-2 flex flex-row items-center gap-5 bg-pinky bg-opacity-50 rounded-full"
+            className={`w-fit px-4 py-2 flex flex-row items-center gap-5 ${pathname === "/profile" && "bg-pinky bg-opacity-50 rounded-full"}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
