@@ -1,37 +1,53 @@
+import { Link, useNavigate } from "react-router-dom";
 import { LoginSchema, loginSchema } from "@/utils/apis/auth";
 
 import { Button } from "@/components/ui/button";
 import CustomFormField from "@/components/custom-formfield";
 import { Form } from "@/components/ui/ui/form";
 import { Input } from "@/components/ui/ui/input";
-import { Link } from "react-router-dom";
 import React from "react";
 import logo from "@/assets/Chirpy.svg";
+import { postLogin } from "@/utils/apis/auth/api";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const Login = () => {
+  const navigate = useNavigate()
   const form = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: "",
+      username: "",
       password: "",
     },
   });
+
+  const handleLogin = async (data: LoginSchema) => {
+    try {
+      const result = await postLogin(data);
+      console.log(result);
+      
+      const token = result.token;
+      if (token) {
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="h-screen bg-sage4 flex flex-col justify-center items-center">
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(() => {})}
+          onSubmit={form.handleSubmit(handleLogin)}
           className="flex flex-col w-full md:w-1/3 bg-white rounded-md p-8"
         >
           <img className="-mt-28" src={logo} alt="Chirpy Logo" />
-          <CustomFormField control={form.control} name="email" label="Email">
+          <CustomFormField control={form.control} name="username" label="Username">
             {(field) => (
               <Input
                 {...field}
-                placeholder="Phone Number, Full Name or Email"
-                type="email"
+                placeholder="Username"
+                type="text"
                 className="p-3 bg-sage3 rounded-md mt-4 sm:mt-8"
                 disabled={form.formState.isSubmitting}
                 aria-disabled={form.formState.isSubmitting}
