@@ -1,13 +1,13 @@
-import { Button } from "@/components/ui/button";
+import CreatePosting from "@/components/Posting/create-posting";
+import ListPosting from "@/components/Posting/list-posting";
 import LayoutPage from "@/layouts/layout-page";
 
-function App() {
+export default function Home() {
   return (
     <LayoutPage>
-      <h1 className="text-red-500 text-2xl">Home page</h1>
-      <Button>Hello world</Button>
+      <CreatePosting/>
+      <ListPosting/>
     </LayoutPage>
   );
 }
 
-export default App;
