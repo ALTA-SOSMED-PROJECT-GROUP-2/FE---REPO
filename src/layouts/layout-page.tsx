@@ -9,7 +9,6 @@ interface Props {
 export default function LayoutPage(props: Readonly<Props>) {
   const { children } = props;
   return (
-
     <div className="w-full h-screen flex flex-col md:flex-row">
       <Sidebar />
       <div className="w-full grow overflow-auto">

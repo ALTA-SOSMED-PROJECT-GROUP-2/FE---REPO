@@ -9,9 +9,11 @@ import React from "react";
 import logo from "@/assets/Chirpy.svg";
 import { postLogin } from "@/utils/apis/auth/api";
 import { useForm } from "react-hook-form";
+import { useToken } from "@/utils/contexts/token";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const Login = () => {
+  const { changeToken } = useToken();
   const navigate = useNavigate()
   const form = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
@@ -24,7 +26,7 @@ const Login = () => {
   const handleLogin = async (data: LoginSchema) => {
     try {
       const result = await postLogin(data);
-      console.log(result);
+      changeToken(result.token);
       
       const token = result.token;
       if (token) {

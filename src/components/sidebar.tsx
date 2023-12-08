@@ -1,11 +1,22 @@
 import { Link, useLocation } from "react-router-dom";
 
 import logo from "@/assets/Chirpy.svg";
+import { useToast } from "./ui/ui/use-toast";
+import { useToken } from "@/utils/contexts/token";
 
 const Sidebar = () => {
-  const location = useLocation()
+  const { toast } = useToast();
+  const { changeToken, token } = useToken();
+  const location = useLocation();
   const pathname = location.pathname;
-  
+
+  const handleLogout = () => {
+    changeToken();
+    toast({
+      description: "Logout Successfully",
+    });
+  };
+
   return (
     <div className="min-h-screen hidden md:flex flex-col border border-r-sage1 w-[30rem]">
       <img className=" h-36" src={logo} alt="Chirpy Logo" />
@@ -13,7 +24,9 @@ const Sidebar = () => {
         <div className="mt-20">
           <Link
             to="/"
-            className={`w-fit px-4 py-2 flex flex-row items-center gap-5 ${pathname === "/" && "bg-pinky bg-opacity-50 rounded-full"}`}
+            className={`w-fit px-4 py-2 flex flex-row items-center gap-5 ${
+              pathname === "/" && "bg-pinky bg-opacity-50 rounded-full"
+            }`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,44 +43,69 @@ const Sidebar = () => {
             </svg>
             <p className=" text-tealLagoon">Home</p>
           </Link>
-          <Link
-            to="/profile"
-            className={`w-fit px-4 py-2 flex flex-row items-center gap-5 ${pathname === "/profile" && "bg-pinky bg-opacity-50 rounded-full"}`}
+          {token && (
+            <Link
+              to="/profile"
+              className={`w-fit px-4 py-2 flex flex-row items-center gap-5 ${
+                pathname === "/profile" && "bg-pinky bg-opacity-50 rounded-full"
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                className="w-6"
+              >
+                <path
+                  d="M14 0C10.15 0 7 3.92 7 8.75C7 13.58 10.15 17.5 14 17.5C17.85 17.5 21 13.58 21 8.75C21 3.92 17.85 0 14 0ZM6.685 17.5C2.975 17.675 0 20.72 0 24.5V28H28V24.5C28 20.72 25.06 17.675 21.315 17.5C19.425 19.635 16.835 21 14 21C11.165 21 8.575 19.635 6.685 17.5Z"
+                  fill="#86A789"
+                />
+              </svg>
+              <p className=" text-tealLagoon">Profile</p>
+            </Link>
+          )}
+        </div>
+        {token ? (
+          <div
+            onClick={handleLogout}
+            className="w-fit mb-20 px-4 py-2 flex flex-row items-center gap-5 cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"
-              height="28"
-              viewBox="0 0 28 28"
+              height="25"
+              viewBox="0 0 28 25"
               fill="none"
-              className="w-6"
             >
               <path
-                d="M14 0C10.15 0 7 3.92 7 8.75C7 13.58 10.15 17.5 14 17.5C17.85 17.5 21 13.58 21 8.75C21 3.92 17.85 0 14 0ZM6.685 17.5C2.975 17.675 0 20.72 0 24.5V28H28V24.5C28 20.72 25.06 17.675 21.315 17.5C19.425 19.635 16.835 21 14 21C11.165 21 8.575 19.635 6.685 17.5Z"
+                d="M10.5 0V3.5H24.5V21H10.5V24.5H28V0H10.5ZM7 7L0 12.25L7 17.5V14H21V10.5H7V7Z"
                 fill="#86A789"
               />
             </svg>
-            <p className=" text-tealLagoon">Profile</p>
-          </Link>
-        </div>
-        <Link
-          to="/login"
-          className="w-fit mb-20 px-4 py-2 flex flex-row items-center gap-5"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="25"
-            viewBox="0 0 28 25"
-            fill="none"
+            <p className=" text-tealLagoon">Sign out</p>
+          </div>
+        ) : (
+          <Link
+            to={"/login"}
+            className="w-fit mb-20 px-4 py-2 flex flex-row items-center gap-5 cursor-pointer"
           >
-            <path
-              d="M10.5 0V3.5H24.5V21H10.5V24.5H28V0H10.5ZM7 7L0 12.25L7 17.5V14H21V10.5H7V7Z"
-              fill="#86A789"
-            />
-          </svg>
-          <p className=" text-tealLagoon">Sign out</p>
-        </Link>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="25"
+              viewBox="0 0 28 25"
+              fill="none"
+            >
+              <path
+                d="M10.5 0V3.5H24.5V21H10.5V24.5H28V0H10.5ZM7 7L0 12.25L7 17.5V14H21V10.5H7V7Z"
+                fill="#86A789"
+              />
+            </svg>
+            <p className=" text-tealLagoon">Sign In</p>
+          </Link>
+        )}
       </nav>
     </div>
   );
