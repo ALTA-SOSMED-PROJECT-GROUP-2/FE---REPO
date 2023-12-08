@@ -24,7 +24,7 @@ export default function CreatePosting() {
         </div>
         <div className="flex items-center gap-2">
           <Input
-            className="w-[40rem] py-8 bg-sage2 placeholder:text-textColor2 placeholder:text-lg rounded-full"
+            className="w-[40rem] py-8 bg-sage2 placeholder:text-textColor2 placeholder:text-lg rounded-full font-bold"
             placeholder=" What do you think ?..."
           />
         </div>
