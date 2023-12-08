@@ -14,7 +14,7 @@ export const registerSchema = z.object({
     .string()
     .min(1, { message: "Email is required" })
     .email("Not a valid email"),
-  phone_number: z
+  phone: z
     .string()
     .min(7, { message: "Phone number minimum length is 7" }),
   full_name: z.string().min(1, { message: "Full name is required" }),
