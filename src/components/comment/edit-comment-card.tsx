@@ -1,10 +1,11 @@
 import EditComment from "./edit-comment";
+import avatar from "@/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg"
 
 export default function EditCommentCard() {
   return (
     <div className="flex mb-10 gap-4 border-b border-b-sage1 py-6 w-full px-20">
       <div>
-        <img src="/src/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg" alt="" />
+        <img src={avatar} alt="" />
       </div>
       <div className="flex flex-col gap-4 w-fit">
         <div>

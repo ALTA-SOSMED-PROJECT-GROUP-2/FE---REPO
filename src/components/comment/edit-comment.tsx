@@ -4,6 +4,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/ui/dropdown-menu";
+import trash from "@/assets/🦆 icon _trash_.svg"
+import pencil from "@/assets/🦆 icon _pencil_.svg"
 
 import Alert from "../alert";
 
@@ -31,13 +33,13 @@ export default function EditComment() {
           description="This action cannot be undone."
         >
           <div className="flex items-center gap-2 p-2">
-            <img src="/src/assets/🦆 icon _trash_.svg" alt="" />
+            <img src={trash} alt="" />
             <p>Delete</p>
           </div>
         </Alert>
         <DropdownMenuSeparator />
         <div className="flex items-center gap-2 p-2">
-          <img src="/src/assets/🦆 icon _pencil_.svg" alt="" />
+          <img src={pencil} alt="" />
           <p>Edit</p>
         </div>
       </DropdownMenuContent>

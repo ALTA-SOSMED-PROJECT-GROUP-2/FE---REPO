@@ -1,5 +1,7 @@
 import { Posting } from "@/utils/apis/posting";
 import { Link } from "react-router-dom";
+import avatar from "@/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg"
+import comment from "@/assets/comment (1) 2.svg"
 
 interface Props {
   data: Posting;
@@ -11,7 +13,7 @@ export default function CardPosting(props: Props) {
     <div className="border-b border-b-sage1 py-10 w-full px-10">
       <div className="flex pb-4 px-10 gap-4">
         <div>
-          <img src="/src/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg" alt="" />
+          <img src={avatar} alt="" />
         </div>
         <div className="flex flex-col gap-4 w-full">
           <div>
@@ -32,7 +34,7 @@ export default function CardPosting(props: Props) {
                 to={`/comments/${data.id}`}
                 className="hover:bg-sage3 w-fit rounded-full p-1"
               >
-                <img src="/src/assets/comment (1) 2.svg" alt="" />
+                <img src={comment} alt="" />
               </Link>
             </div>
           </div>

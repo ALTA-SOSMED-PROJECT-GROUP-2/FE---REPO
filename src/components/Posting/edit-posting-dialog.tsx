@@ -15,6 +15,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/ui/dropdown-menu";
+import avatar from "@/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg";
+import trash from "@/assets/🦆 icon _trash_.svg";
+import photoEditing from "@/assets/photo-editing 1 (1).svg";
+import insertIcon from "@/assets/insert-picture-icon 1.svg";
+import tfto from "@/assets/Twenty five twenty one 1.svg"
 
 import { Textarea } from "../ui/ui/textarea";
 
@@ -22,17 +27,13 @@ export default function EditPostingDialog() {
   return (
     <AlertDialog>
       <AlertDialogTrigger className="flex items-center gap-2">
-        <img src="/src/assets/🦆 icon _pencil_.svg" alt="" />
+        <img src={avatar} alt="" />
         <p>Edit</p>
       </AlertDialogTrigger>
       <AlertDialogContent className="w-[40rem] h-[37rem]">
         <AlertDialogHeader>
           <AlertDialogTitle className="flex items-center gap-1 mb-3">
-            <img
-              src="src/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg"
-              alt=""
-              className="w-20"
-            />
+            <img src={avatar} alt="" className="w-20" />
             <div>
               <p className="font-chela text-pinky font-light">Cutie_person</p>
               <p className="font-chelsea text-sage1 font-extralight">
@@ -48,7 +49,7 @@ export default function EditPostingDialog() {
               />
             </div>
             <div>
-              <img src="/src/assets/Twenty five twenty one 1.svg" alt="" />
+              <img src={tfto} alt="" />
             </div>
           </AlertDialogDescription>
         </AlertDialogHeader>
@@ -60,22 +61,21 @@ export default function EditPostingDialog() {
             <div className="w-20 hover:scale-110">
               <DropdownMenu>
                 <DropdownMenuTrigger>
-                  <img src="/src/assets/insert-picture-icon 1.svg" alt="" />
+                  <img src={insertIcon} alt="" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="font-chelsea text-textColor2 flex flex-col">
                   <div className="flex items-center gap-2 p-2">
-                    <img src="/src/assets/🦆 icon _trash_.svg" alt="" />
+                    <img src={trash} alt="" />
                     <p>Delete</p>
                   </div>
                   <DropdownMenuSeparator />
                   <div className="flex items-center gap-2 p-2">
-                    <img src="/src/assets/photo-editing 1 (1).svg" alt="" />
+                    <img src={photoEditing} alt="" />
                     Change
                   </div>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
-
             <AlertDialogAction className="bg-sage1 hover:bg-sage2 hover:text-white text-white text-lg">
               Send
             </AlertDialogAction>

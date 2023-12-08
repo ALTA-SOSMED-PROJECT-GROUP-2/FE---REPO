@@ -10,6 +10,8 @@ import {
 } from "../ui/ui/alert-dialog";
 import { Input } from "../ui/ui/input";
 import { Textarea } from "../ui/ui/textarea";
+import avatar from "@/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg"
+import insertIcon from '@/assets/insert-picture-icon 1.svg'
 
 export default function CreatePosting() {
   return (
@@ -17,7 +19,7 @@ export default function CreatePosting() {
       <AlertDialogTrigger className="flex items-center justify-center sticky bg-white top-0 w-full py-6 shadow">
         <div>
           <img
-            src="/src/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg"
+            src={avatar}
             alt=""
             className="w-24"
           />
@@ -33,7 +35,7 @@ export default function CreatePosting() {
         <AlertDialogHeader>
           <AlertDialogTitle className="flex items-center gap-1 mb-3">
             <img
-              src="src/assets/_ᨵ_𝐏𝐧𝐠__づ_ど_-removebg-preview 1.svg"
+              src={avatar}
               alt=""
               className="w-20"
             />
@@ -58,7 +60,7 @@ export default function CreatePosting() {
           <div className="flex items-center">
             <div className="w-20 hover:scale-110">
             <img
-              src="/src/assets/insert-picture-icon 1.svg"
+              src={insertIcon}
               alt=""
               className=""
             />

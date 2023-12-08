@@ -7,6 +7,7 @@ import {
 
 import Alert from "../alert";
 import EditPostingDialog from "./edit-posting-dialog";
+import trash from "@/assets/🦆 icon _trash_.svg"
 
 export default function EditPosting() {
   return (
@@ -32,7 +33,7 @@ export default function EditPosting() {
           description="This action cannot be undone. This will permanently delete your account an you cannot use your email again."
         >
           <div className="flex items-center gap-2 p-2">
-            <img src="/src/assets/🦆 icon _trash_.svg" alt="" />
+            <img src={trash} alt="" />
             <p>Delete</p>
           </div>
         </Alert>
