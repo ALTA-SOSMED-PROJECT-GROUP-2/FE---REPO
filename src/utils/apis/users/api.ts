@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axiosWithConfig from "../axiosWithConfig";
 
 export const getProfile = async () => {
