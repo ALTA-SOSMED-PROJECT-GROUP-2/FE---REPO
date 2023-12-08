@@ -93,16 +93,17 @@ const Sidebar = () => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="25"
-              viewBox="0 0 28 25"
+              width="29"
+              height="32"
+              viewBox="0 0 29 32"
               fill="none"
             >
               <path
-                d="M10.5 0V3.5H24.5V21H10.5V24.5H28V0H10.5ZM7 7L0 12.25L7 17.5V14H21V10.5H7V7Z"
+                d="M10.875 0V4.57143H25.375V27.4286H10.875V32H29V0H10.875ZM14.5 9.14286V13.7143H0V18.2857H14.5V22.8571L21.75 16L14.5 9.14286Z"
                 fill="#86A789"
               />
             </svg>
+
             <p className=" text-tealLagoon">Sign In</p>
           </Link>
         )}

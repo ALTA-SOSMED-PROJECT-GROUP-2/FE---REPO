@@ -1,10 +1,11 @@
-import Alert from "../alert";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/ui/dropdown-menu";
+
+import Alert from "../alert";
 
 export default function EditComment() {
   return (
@@ -27,7 +28,7 @@ export default function EditComment() {
       <DropdownMenuContent className="font-chelsea text-textColor2">
         <Alert
           title="Are you absolutely sure?"
-          description="This action cannot be undone. This will permanently delete your account an you cannot use your email again."
+          description="This action cannot be undone."
         >
           <div className="flex items-center gap-2 p-2">
             <img src="/src/assets/🦆 icon _trash_.svg" alt="" />
