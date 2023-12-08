@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { LoginSchema, RegisterSchema } from ".";
 
 import axios from "axios";

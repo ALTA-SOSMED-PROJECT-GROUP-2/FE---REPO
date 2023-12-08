@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import CustomFormField from "@/components/custom-formfield";
 import { Form } from "@/components/ui/ui/form";
 import { Input } from "@/components/ui/ui/input";
-import React from "react";
 import logo from "@/assets/Chirpy.svg";
 import { postLogin } from "@/utils/apis/auth/api";
 import { useForm } from "react-hook-form";
