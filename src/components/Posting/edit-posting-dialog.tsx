@@ -20,6 +20,7 @@ import trash from "@/assets/🦆 icon _trash_.svg";
 import photoEditing from "@/assets/photo-editing 1 (1).svg";
 import insertIcon from "@/assets/insert-picture-icon 1.svg";
 import tfto from "@/assets/Twenty five twenty one 1.svg"
+import pencil from "@/assets/🦆 icon _pencil_.svg"
 
 import { Textarea } from "../ui/ui/textarea";
 
@@ -27,7 +28,7 @@ export default function EditPostingDialog() {
   return (
     <AlertDialog>
       <AlertDialogTrigger className="flex items-center gap-2">
-        <img src={avatar} alt="" />
+        <img src={pencil} alt="" />
         <p>Edit</p>
       </AlertDialogTrigger>
       <AlertDialogContent className="w-[40rem] h-[37rem]">
